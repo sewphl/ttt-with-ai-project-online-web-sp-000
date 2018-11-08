@@ -29,12 +29,12 @@ class MyCLI
 
     def playAgain
       play_again = ""
-  until play_again.include?("yes") || play_again.include?("no")
-    puts "Would you like to play again?"
-    play_again = gets.strip.downcase
-    puts "Invalid answer. Please enter 'yes' or 'no'." unless play_again.include?("yes") || play_again.include?("no")
-  end
-  MyCLI.new if play_again.include?("yes")
+      until play_again.include?("yes") || play_again.include?("no")
+        puts "Would you like to play again?"
+        play_again = gets.strip.downcase
+        puts "Please enter 'yes' or 'no'." unless play_again.include?("yes") || play_again.include?("no")
+      end
+    MyCLI.new if play_again.include?("yes")
 end
 
 end

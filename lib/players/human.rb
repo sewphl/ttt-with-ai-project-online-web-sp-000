@@ -1,9 +1,8 @@
 module Players
     class Human < Player
         def move(board)
-            #human, please enter a move via CLI
-            mymove = gets.chomp
-            mymove
+            puts "Please enter 1-9:"
+            gets.strip
         end
     end
 end

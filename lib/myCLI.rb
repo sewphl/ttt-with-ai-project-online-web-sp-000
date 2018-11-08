@@ -2,6 +2,7 @@ class MyCLI
 
     def initialize
         welcome
+        playAgain
     end
 
     def welcome
@@ -24,5 +25,15 @@ class MyCLI
                 Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Human.new("O")).play
             end
         end
+    end
+
+    def playAgain
+        play_again = nil
+        until play_again == "yes" || play_again == "no"
+            puts "Play again?"
+            play_again = gets.strip.downcase
+            puts "Please enter 'yes' or 'no'." unless play_again == "yes" || play_again == "no"
+        end
+        MyCLI.new if play_again == "yes"
     end
 end

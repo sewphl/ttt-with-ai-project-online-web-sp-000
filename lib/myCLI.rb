@@ -26,4 +26,15 @@ class MyCLI
             end
         end
     end
+
+    def playAgain
+  play_again = ""
+  until play_again.include?("yes") || play_again.include?("no")
+    puts "Would you like to play again?"
+    play_again = gets.chomp.downcase
+    puts "Invalid answer. Please enter 'yes' or 'no'." unless play_again.include?("yes") || play_again.include?("no")
+  end
+  TicTacToe.new if play_again.include?("yes")
+end
+    
 end

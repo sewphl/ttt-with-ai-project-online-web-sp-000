@@ -34,7 +34,7 @@ class MyCLI
     play_again = gets.strip.downcase
     puts "Invalid answer. Please enter 'yes' or 'no'." unless play_again.include?("yes") || play_again.include?("no")
   end
-  TicTacToe.new if play_again.include?("yes")
+  MyCLI.new if play_again.include?("yes")
 end
 
 end

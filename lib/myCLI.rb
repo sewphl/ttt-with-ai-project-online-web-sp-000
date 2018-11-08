@@ -2,6 +2,7 @@ class MyCLI
 
     def initialize
         welcome
+        playAgain
     end
 
     def welcome

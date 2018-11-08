@@ -32,7 +32,7 @@ class MyCLI
       until play_again == "yes" || play_again == "no"
         puts "Play again?"
         play_again = gets.strip.downcase
-        puts "Please enter 'yes' or 'no'." unless play_again.include?("yes") || play_again.include?("no")
+        puts "Please enter 'yes' or 'no'." unless play_again == "yes" || play_again == "no"
       end
     MyCLI.new if play_again.include?("yes")
 end

@@ -1,9 +1,9 @@
 class MyCLI
-    
+
     def initialize
         welcome
     end
-    
+
     def welcome
         puts "Welcome!"
         puts "What kind of game do you want to play?"
@@ -25,5 +25,4 @@ class MyCLI
             end
         end
     end
-    
 end

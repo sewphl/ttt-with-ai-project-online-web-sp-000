@@ -34,7 +34,7 @@ class MyCLI
         play_again = gets.strip.downcase
         puts "Please enter 'yes' or 'no'." unless play_again == "yes" || play_again == "no"
       end
-    MyCLI.new if play_again.include?("yes")
+    MyCLI.new if play_again == "yes"
 end
 
 end
